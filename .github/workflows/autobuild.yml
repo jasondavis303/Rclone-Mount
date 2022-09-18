@@ -1,7 +1,7 @@
 name: Auto Build
 
 on:
-  workflow_dispatch:
+  push:
     branches: [ master ]
 
 jobs:
