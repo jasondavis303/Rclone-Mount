@@ -1,0 +1,23 @@
+name: Auto Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        dotnet restore
+        msbuild /t:publish /p:Configuration=Release /p:PublishProfile=ClickOnceProfile /p:RuntimeIdentifier=win-x64 /p:ApplicationVersion=2.0.1.${{github.run_number}} /p:MinimumRequiredVersion=2.0.1.${{github.run_number}} /p:PublishDir=bin\publish
+
