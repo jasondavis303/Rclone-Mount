@@ -24,5 +24,5 @@ jobs:
         msbuild /t:publish /p:Configuration=Release /p:PublishProfile=ClickOnceProfile /p:RuntimeIdentifier=win-x64 /p:ApplicationVersion=2.0.1.${{github.run_number}} /p:MinimumRequiredVersion=2.0.1.${{github.run_number}} /p:PublishDir=bin\publish
         Invoke-WebRequest -Uri https://downloads.rclone.org/v1.59.2/rclone-v1.59.2-windows-amd64.zip -OutFile rclone.zip
         Expand-Archive rclone.zip -DestinationPath .
-        rclone-v1.59.2-windows-amd64\rclone.exe move "Rclone Mount\bin\publish"" :s3:dustypig/bin/rclone_mount --s3-provider Wasabi --s3-endpoint s3.us-central-1.wasabisys.com --s3-access-key-id ${{secrets.S3_KEY}} --s3-secret-access-key ${{secrets.S3_SECRET}}
+        rclone-v1.59.2-windows-amd64\rclone.exe move "Rclone Mount\bin\publish" :s3:dustypig/bin/rclone_mount --s3-provider Wasabi --s3-endpoint s3.us-central-1.wasabisys.com --s3-access-key-id ${{secrets.S3_KEY}} --s3-secret-access-key ${{secrets.S3_SECRET}}
 
