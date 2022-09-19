@@ -38,19 +38,21 @@ namespace Rclone_Mount
             this.cbDrive = new System.Windows.Forms.ComboBox();
             this.chkReadOnly = new System.Windows.Forms.CheckBox();
             this.chkNetworkMode = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.nudCacheTime = new System.Windows.Forms.NumericUpDown();
-            this.cbCacheMode = new System.Windows.Forms.ComboBox();
-            this.lnkCacheMode = new System.Windows.Forms.LinkLabel();
-            this.lblCacheDir = new System.Windows.Forms.Label();
-            this.tbCache = new System.Windows.Forms.TextBox();
-            this.btnCache = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPath = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblBathMode = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lnkCacheMode = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblCacheDir = new System.Windows.Forms.Label();
+            this.cbBatchMode = new System.Windows.Forms.ComboBox();
+            this.nudCacheTime = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbCacheMode = new System.Windows.Forms.ComboBox();
             this.nudMaxAge = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
+            this.tbCache = new System.Windows.Forms.TextBox();
+            this.btnCache = new System.Windows.Forms.Button();
             this.fbdCache = new System.Windows.Forms.FolderBrowserDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCacheTime)).BeginInit();
@@ -67,30 +69,36 @@ namespace Rclone_Mount
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.btnStart, 2, 19);
+            this.tableLayoutPanel1.Controls.Add(this.btnStart, 2, 21);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbRemotes, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.cbDrive, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.chkReadOnly, 2, 7);
             this.tableLayoutPanel1.Controls.Add(this.chkNetworkMode, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.nudCacheTime, 2, 11);
-            this.tableLayoutPanel1.Controls.Add(this.cbCacheMode, 2, 13);
-            this.tableLayoutPanel1.Controls.Add(this.lnkCacheMode, 1, 13);
-            this.tableLayoutPanel1.Controls.Add(this.lblCacheDir, 1, 17);
-            this.tableLayoutPanel1.Controls.Add(this.tbCache, 2, 17);
-            this.tableLayoutPanel1.Controls.Add(this.btnCache, 4, 17);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tbPath, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 15);
-            this.tableLayoutPanel1.Controls.Add(this.nudMaxAge, 2, 15);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 3, 15);
+            this.tableLayoutPanel1.Controls.Add(this.lblBathMode, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.lnkCacheMode, 1, 15);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 17);
+            this.tableLayoutPanel1.Controls.Add(this.lblCacheDir, 1, 19);
+            this.tableLayoutPanel1.Controls.Add(this.cbBatchMode, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.nudCacheTime, 2, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 13);
+            this.tableLayoutPanel1.Controls.Add(this.cbCacheMode, 2, 15);
+            this.tableLayoutPanel1.Controls.Add(this.nudMaxAge, 2, 17);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 3, 17);
+            this.tableLayoutPanel1.Controls.Add(this.tbCache, 2, 19);
+            this.tableLayoutPanel1.Controls.Add(this.btnCache, 4, 19);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 22;
+            this.tableLayoutPanel1.RowCount = 24;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -108,19 +116,17 @@ namespace Rclone_Mount
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(457, 500);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(457, 549);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // btnStart
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.btnStart, 3);
-            this.btnStart.Location = new System.Drawing.Point(357, 452);
+            this.btnStart.Location = new System.Drawing.Point(357, 501);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 19;
@@ -149,6 +155,7 @@ namespace Rclone_Mount
             this.cbRemotes.Size = new System.Drawing.Size(295, 23);
             this.cbRemotes.Sorted = true;
             this.cbRemotes.TabIndex = 1;
+            this.cbRemotes.SelectedIndexChanged += new System.EventHandler(this.cbRemotes_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -220,101 +227,6 @@ namespace Rclone_Mount
             this.chkNetworkMode.Text = "Network Mode";
             this.chkNetworkMode.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 262);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Cache Time:";
-            // 
-            // nudCacheTime
-            // 
-            this.nudCacheTime.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nudCacheTime.Location = new System.Drawing.Point(106, 260);
-            this.nudCacheTime.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudCacheTime.Name = "nudCacheTime";
-            this.nudCacheTime.Size = new System.Drawing.Size(120, 23);
-            this.nudCacheTime.TabIndex = 9;
-            this.nudCacheTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudCacheTime.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // cbCacheMode
-            // 
-            this.cbCacheMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCacheMode.FormattingEnabled = true;
-            this.cbCacheMode.Items.AddRange(new object[] {
-            "Off",
-            "Minimal",
-            "Writes",
-            "Full"});
-            this.cbCacheMode.Location = new System.Drawing.Point(106, 305);
-            this.cbCacheMode.Name = "cbCacheMode";
-            this.cbCacheMode.Size = new System.Drawing.Size(121, 23);
-            this.cbCacheMode.TabIndex = 12;
-            this.cbCacheMode.SelectedIndexChanged += new System.EventHandler(this.cbCacheMode_SelectedIndexChanged);
-            // 
-            // lnkCacheMode
-            // 
-            this.lnkCacheMode.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lnkCacheMode.AutoSize = true;
-            this.lnkCacheMode.Location = new System.Drawing.Point(23, 309);
-            this.lnkCacheMode.Name = "lnkCacheMode";
-            this.lnkCacheMode.Size = new System.Drawing.Size(77, 15);
-            this.lnkCacheMode.TabIndex = 11;
-            this.lnkCacheMode.TabStop = true;
-            this.lnkCacheMode.Text = "Cache Mode:";
-            this.lnkCacheMode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCacheMode_LinkClicked);
-            // 
-            // lblCacheDir
-            // 
-            this.lblCacheDir.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCacheDir.AutoSize = true;
-            this.lblCacheDir.Enabled = false;
-            this.lblCacheDir.Location = new System.Drawing.Point(23, 407);
-            this.lblCacheDir.Name = "lblCacheDir";
-            this.lblCacheDir.Size = new System.Drawing.Size(43, 15);
-            this.lblCacheDir.TabIndex = 16;
-            this.lblCacheDir.Text = "Cache:";
-            // 
-            // tbCache
-            // 
-            this.tbCache.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbCache.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.tbCache.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
-            this.tableLayoutPanel1.SetColumnSpan(this.tbCache, 2);
-            this.tbCache.Enabled = false;
-            this.tbCache.Location = new System.Drawing.Point(106, 403);
-            this.tbCache.Name = "tbCache";
-            this.tbCache.Size = new System.Drawing.Size(295, 23);
-            this.tbCache.TabIndex = 17;
-            // 
-            // btnCache
-            // 
-            this.btnCache.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnCache.Enabled = false;
-            this.btnCache.Location = new System.Drawing.Point(407, 403);
-            this.btnCache.Name = "btnCache";
-            this.btnCache.Size = new System.Drawing.Size(25, 23);
-            this.btnCache.TabIndex = 18;
-            this.btnCache.Text = "...";
-            this.btnCache.UseVisualStyleBackColor = true;
-            this.btnCache.Click += new System.EventHandler(this.btnCache_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -334,25 +246,119 @@ namespace Rclone_Mount
             this.tbPath.Size = new System.Drawing.Size(295, 23);
             this.tbPath.TabIndex = 3;
             // 
-            // label5
+            // lblBathMode
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(233, 262);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Minutes";
+            this.lblBathMode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblBathMode.AutoSize = true;
+            this.lblBathMode.Location = new System.Drawing.Point(23, 264);
+            this.lblBathMode.Name = "lblBathMode";
+            this.lblBathMode.Size = new System.Drawing.Size(74, 15);
+            this.lblBathMode.TabIndex = 21;
+            this.lblBathMode.Text = "Batch Mode:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 313);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Cache Time:";
+            // 
+            // lnkCacheMode
+            // 
+            this.lnkCacheMode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lnkCacheMode.AutoSize = true;
+            this.lnkCacheMode.Location = new System.Drawing.Point(23, 360);
+            this.lnkCacheMode.Name = "lnkCacheMode";
+            this.lnkCacheMode.Size = new System.Drawing.Size(77, 15);
+            this.lnkCacheMode.TabIndex = 11;
+            this.lnkCacheMode.TabStop = true;
+            this.lnkCacheMode.Text = "Cache Mode:";
+            this.lnkCacheMode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCacheMode_LinkClicked);
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 358);
+            this.label6.Location = new System.Drawing.Point(23, 407);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 15);
             this.label6.TabIndex = 13;
             this.label6.Text = "Max Age:";
+            // 
+            // lblCacheDir
+            // 
+            this.lblCacheDir.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblCacheDir.AutoSize = true;
+            this.lblCacheDir.Enabled = false;
+            this.lblCacheDir.Location = new System.Drawing.Point(23, 456);
+            this.lblCacheDir.Name = "lblCacheDir";
+            this.lblCacheDir.Size = new System.Drawing.Size(43, 15);
+            this.lblCacheDir.TabIndex = 16;
+            this.lblCacheDir.Text = "Cache:";
+            // 
+            // cbBatchMode
+            // 
+            this.cbBatchMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBatchMode.FormattingEnabled = true;
+            this.cbBatchMode.Items.AddRange(new object[] {
+            "Off",
+            "Sync",
+            "Async"});
+            this.cbBatchMode.Location = new System.Drawing.Point(106, 260);
+            this.cbBatchMode.Name = "cbBatchMode";
+            this.cbBatchMode.Size = new System.Drawing.Size(121, 23);
+            this.cbBatchMode.TabIndex = 22;
+            // 
+            // nudCacheTime
+            // 
+            this.nudCacheTime.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudCacheTime.Location = new System.Drawing.Point(106, 309);
+            this.nudCacheTime.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCacheTime.Name = "nudCacheTime";
+            this.nudCacheTime.Size = new System.Drawing.Size(120, 23);
+            this.nudCacheTime.TabIndex = 9;
+            this.nudCacheTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudCacheTime.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(233, 313);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 15);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Minutes";
+            // 
+            // cbCacheMode
+            // 
+            this.cbCacheMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCacheMode.FormattingEnabled = true;
+            this.cbCacheMode.Items.AddRange(new object[] {
+            "Off",
+            "Minimal",
+            "Writes",
+            "Full"});
+            this.cbCacheMode.Location = new System.Drawing.Point(106, 358);
+            this.cbCacheMode.Name = "cbCacheMode";
+            this.cbCacheMode.Size = new System.Drawing.Size(121, 23);
+            this.cbCacheMode.TabIndex = 12;
+            this.cbCacheMode.SelectedIndexChanged += new System.EventHandler(this.cbCacheMode_SelectedIndexChanged);
             // 
             // nudMaxAge
             // 
@@ -361,7 +367,7 @@ namespace Rclone_Mount
             0,
             0,
             0});
-            this.nudMaxAge.Location = new System.Drawing.Point(106, 354);
+            this.nudMaxAge.Location = new System.Drawing.Point(106, 403);
             this.nudMaxAge.Minimum = new decimal(new int[] {
             1,
             0,
@@ -381,17 +387,41 @@ namespace Rclone_Mount
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(233, 358);
+            this.label7.Location = new System.Drawing.Point(233, 407);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 15);
             this.label7.TabIndex = 15;
             this.label7.Text = "Minutes";
             // 
+            // tbCache
+            // 
+            this.tbCache.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbCache.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.tbCache.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
+            this.tableLayoutPanel1.SetColumnSpan(this.tbCache, 2);
+            this.tbCache.Enabled = false;
+            this.tbCache.Location = new System.Drawing.Point(106, 452);
+            this.tbCache.Name = "tbCache";
+            this.tbCache.Size = new System.Drawing.Size(295, 23);
+            this.tbCache.TabIndex = 17;
+            // 
+            // btnCache
+            // 
+            this.btnCache.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCache.Enabled = false;
+            this.btnCache.Location = new System.Drawing.Point(407, 452);
+            this.btnCache.Name = "btnCache";
+            this.btnCache.Size = new System.Drawing.Size(25, 23);
+            this.btnCache.TabIndex = 18;
+            this.btnCache.Text = "...";
+            this.btnCache.UseVisualStyleBackColor = true;
+            this.btnCache.Click += new System.EventHandler(this.btnCache_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 500);
+            this.ClientSize = new System.Drawing.Size(457, 549);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -432,5 +462,7 @@ namespace Rclone_Mount
         private Label label6;
         private NumericUpDown nudMaxAge;
         private Label label7;
+        private Label lblBathMode;
+        private ComboBox cbBatchMode;
     }
 }

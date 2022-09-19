@@ -26,5 +26,8 @@
     <Setting Name="MaxAge" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">60</Value>
     </Setting>
+    <Setting Name="DropBoxBatchMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sync</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

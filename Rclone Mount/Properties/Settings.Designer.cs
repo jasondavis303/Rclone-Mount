@@ -118,5 +118,17 @@ namespace Rclone_Mount.Properties {
                 this["MaxAge"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Sync")]
+        public string DropBoxBatchMode {
+            get {
+                return ((string)(this["DropBoxBatchMode"]));
+            }
+            set {
+                this["DropBoxBatchMode"] = value;
+            }
+        }
     }
 }
