@@ -320,6 +320,11 @@ namespace Rclone_Mount
             0,
             0});
             this.nudCacheTime.Location = new System.Drawing.Point(106, 309);
+            this.nudCacheTime.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
             this.nudCacheTime.Minimum = new decimal(new int[] {
             1,
             0,
@@ -368,6 +373,11 @@ namespace Rclone_Mount
             0,
             0});
             this.nudMaxAge.Location = new System.Drawing.Point(106, 403);
+            this.nudMaxAge.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
             this.nudMaxAge.Minimum = new decimal(new int[] {
             1,
             0,
