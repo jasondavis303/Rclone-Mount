@@ -214,6 +214,7 @@ namespace Rclone_Mount
             this.chkReadOnly.TabIndex = 6;
             this.chkReadOnly.Text = "Read Only";
             this.chkReadOnly.UseVisualStyleBackColor = true;
+            this.chkReadOnly.CheckedChanged += new System.EventHandler(this.chkReadOnly_CheckedChanged);
             // 
             // chkNetworkMode
             // 

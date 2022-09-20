@@ -100,9 +100,12 @@ namespace Rclone_Mount
 
         private void cbRemotes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bool enableBatch = cbRemotes.SelectedIndex >= 0 && _remoteTypes[cbRemotes.SelectedItem as string] == "dropbox";
-            lblBathMode.Enabled = enableBatch;
-            cbBatchMode.Enabled = enableBatch;
+            EnableDropboxBatchMode();
+        }
+
+        private void chkReadOnly_CheckedChanged(object sender, EventArgs e)
+        {
+            EnableDropboxBatchMode();
         }
 
         private void lnkCacheMode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -205,6 +208,16 @@ namespace Rclone_Mount
             UseWaitCursor = !enabled;
         }
 
+        private void EnableDropboxBatchMode()
+        {
+            bool enableBatch = cbRemotes.SelectedIndex >= 0 && 
+                _remoteTypes[cbRemotes.SelectedItem as string] == "dropbox"
+                && chkReadOnly.Checked == false;
+
+            lblBathMode.Enabled = enableBatch;
+            cbBatchMode.Enabled = enableBatch;
+        }
+
         private static async Task<string> RunRclone(string args)
         {
             var proc = Process.Start(new ProcessStartInfo
@@ -253,5 +266,6 @@ namespace Rclone_Mount
             return sbRet.ToString();
         }
 
+       
     }
 }
