@@ -160,6 +160,7 @@ namespace Rclone_Mount
                     args += $" --cache-dir \"{tbCache.Text}\"";
             }
 
+            args += " --progress";
 
             var proc = new Process
             {
